@@ -6,107 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <!--
+    <script src="./js/index.js"></script>
+    !-->
 </head>
 
 <body>
     <h1>Javascript</h1>
-
-    <script>
-        let email = 'b0925366079@gmail.com'
-        console.log(typeof (email));
-        console.log(email[0]);
-        console.log(email.length);
-        console.log(email.indexOf('g'));
-        console.log(email[email.length - 1]);
-        console.log(email.toUpperCase());
-        console.log(email.toLowerCase());
-        console.log(email.substring(0, 6));
-        console.log(email.replace('b', 'a'));
-        console.log(email.includes('m'));
-
-        for (let i = 0; i < email.length; i++) {
-            console.log(email[i])
-        };
-
-        let x = 10;
-        let y = 2;
-        let z = 5;
-
-        console.log(++x, y++);
-        console.log(x, y);
-
-        console.log('A' > 'a');  //acsii碼
-        console.log(25 == '25');  //會自動轉型，數值相同
-        console.log(25 === '25'); //數值以及型態一起做比較判斷
-
-        if (x > y && x > z) {    //and
-            console.log(true)
-        }
-        if (x < y || x > z) {    //or
-            console.log(true)
-        }
-        if (!(x < y) && x > z) { //not
-            console.log(true)
-        }
-
-        console.log(Math);
-        x = -7.7;
-        console.log(x);
-        console.log(Math.abs(x));   //絕對值
-        console.log(Math.ceil(x));  //大於等於最接近該數的整數
-        console.log(Math.floor(x)); //小於等於最接近該數的整數
-        console.log(Math.round(x)); //四捨五入
-
-        console.log(Math.random());  //亂數0~1之間
-        console.log(Math.random() * 10);  //亂數0~1之間的10倍
-        console.log(Math.floor(Math.random() * 10)); //亂數0~9之間
-        console.log(Math.floor(Math.random() * 10) + 1); //亂數1~10之間
-
-        //console.log(Math.floor(Math.random()*(end-start+1))+start)
-
-        //while (true) {
-        //    let number = Math.floor(Math.random() * (100 - 10 + 1) + 10);
-        //    console.log(number);
-        //    if (number >= 100) {
-        //        break;
-        //    }
-        //};
-
-        let start = 1;
-        let end = 49;
-        let lotto = '';
-        let lotstr = '';
-
-        for (let k = 0; k < 10; k++) { //此為外迴圈10組
-            for (let j = 0; j < 6; j++) {
-                let number = Math.floor(Math.random() * (end - start + 1) + start);
-                //console.log(number);
-                lotto += number + ' ';
-                lotstr += `第${j + 1}個號碼:${number}` + ' ';
-                console.log(`第${j + 1}個號碼:${number}`); //此為format用法
-                document.write(`<h2>第${j + 1}個號碼:${number}</h2>`);
-
-            };
-            document.write(lotstr);
-            lotstr = '';
-        };
-        //console.log(lotto); //橫版顯示
-
-
-
-
-        //let radius = prompt("請輸入半徑:");
-        //const PI = 3.1415926;
-        //area = radius * radius * PI;
-        //console.log(typeof (radius));
-        //console.log(Number(radius) + 10);
-        //console.log(radius + 10);
-        //console.log(area);
-        //document.write(typeof (radius), area)
-        //document.write("<h2>" + typeof (radius), area + "</h2>")
-
-    </script>
+    <h3>本期大樂透</h3>
+    <div class="lotto-numbers">
+        <ul>
+            <li>開獎中...</li>
+        </ul>
+    </div>
+    <input type="button" id="start" value="開獎按鈕!">
+    <br>
+    <script src="./js/index.js"></script>
 
 </body>
 
